@@ -14,7 +14,7 @@ export LC_CTYPE=C
 grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.[mh]' |sed "s/[+-]//g"|sed "s/[();,: *\^\/\{]/ /g"|sed "s/[ ]*</</"| sed "/^[ ]*IBAction/d"|awk '{split($0,b," "); print b[2]; }'| sort|uniq |sed "/^$/d"|sed -n "/^hsk_/p" >$STRING_SYMBOL_FILE
 
 
-#维护数据库方便日后作排重,一下代码来自念茜的微博
+#维护数据库方便日后作排重,以下代码来自念茜的微博
 createTable()
 {
 echo "create table $TABLENAME(src text, des text);" | sqlite3 $SYMBOL_DB_FILE

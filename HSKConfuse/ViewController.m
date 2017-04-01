@@ -44,7 +44,13 @@
     
 }
 
+- (void)hsk_setUIStyle{
+    
+}
 
+- (void)hsk_setUIStyle1{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
